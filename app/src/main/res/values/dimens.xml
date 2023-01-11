@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="horizontal_margin_fragment">16dp</dimen>
+    <dimen name="vertical_margin_fragment">16dp</dimen>
+    <dimen name="value_10">10dp</dimen>
+    <dimen name="value_16">16dp</dimen>
+    <dimen name="value_15">15dp</dimen>
+    <dimen name="value_30">30dp</dimen>
+    <dimen name="value_36">36dp</dimen>
+    <dimen name="value_150">150dp</dimen>
+    <dimen name="value_200">200dp</dimen>
+    <dimen name="zero_width">0dp</dimen>
+    <dimen name="zero_height">0dp</dimen>
+    <dimen name="percent_5" type="dimen" format="float">0.05</dimen>
+    <dimen name="percent_10" type="dimen" format="float">0.1</dimen>
+    <dimen name="percent_25" type="dimen" format="float">0.25</dimen>
+    <dimen name="percent_30" type="dimen" format="float">0.3</dimen>
+    <dimen name="percent_40" type="dimen" format="float">0.4</dimen>
+    <dimen name="percent_60" type="dimen" format="float">0.6</dimen>
+    <dimen name="percent_90" type="dimen" format="float">0.9</dimen>
+    <dimen name="percent_95" type="dimen" format="float">0.95</dimen>
+    <dimen name="value_8">8dp</dimen>
+    <dimen name="value_50">50dp</dimen>
+    <dimen name="value_100">100dp</dimen>
+    <dimen name="weight_1">1</dimen>
+    <dimen name="value_24">24dp</dimen>
+    <item name="alpha_03" type="dimen" format="float">0.3</item>
+    <item name="alpha_02" type="dimen" format="float">0.2</item>
+</resources>

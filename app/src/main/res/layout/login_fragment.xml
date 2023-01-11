@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:id="@+id/backgroundImage"
+            android:layout_width="@dimen/zero_width"
+            android:layout_height="@dimen/zero_height"
+            android:alpha="@dimen/alpha_03"
+            android:contentDescription="@string/description"
+            android:scaleType="centerCrop"
+            android:src="@drawable/onboarding_image"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="ImageContrastCheck"
+            tools:src="@drawable/onboarding_image" />
+
+
+        <TextView
+            android:id="@+id/appNameTextView"
+            style="@style/loginTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/value_8"
+            android:text="@string/app_name"
+            app:layout_constraintBottom_toTopOf="@+id/subTitleTextView"
+            app:layout_constraintStart_toStartOf="@+id/userNameTextView"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/subTitleTextView"
+            style="@style/loginSubTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/value_50"
+            android:text="@string/inventory"
+            app:layout_constraintBottom_toTopOf="@+id/userNameTextView"
+            app:layout_constraintStart_toStartOf="@+id/appNameTextView"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/userNameTextView"
+            style="@style/loginTextView"
+            android:layout_width="@dimen/zero_width"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/value_24"
+            android:text="@string/user"
+            app:layout_constraintBottom_toTopOf="@id/userNameField"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <EditText
+            android:id="@+id/userNameField"
+            style="@style/loginTextField"
+            android:layout_width="@dimen/zero_width"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/value_10"
+            android:layout_marginEnd="@dimen/value_24"
+            android:hint="@string/hint_email"
+            android:importantForAutofill="yes"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp"
+            android:selectAllOnFocus="true"
+            app:layout_constraintBottom_toTopOf="@id/passwordTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/userNameTextView"
+            app:layout_constraintTop_toBottomOf="@+id/userNameTextView" />
+
+        <TextView
+            android:id="@+id/passwordTextView"
+            style="@style/loginTextView"
+            android:layout_width="@dimen/zero_width"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/value_8"
+            android:text="@string/password"
+            app:layout_constraintBottom_toTopOf="@id/passwordField"
+            app:layout_constraintStart_toStartOf="@+id/userNameField"
+            app:layout_constraintTop_toBottomOf="@+id/userNameField" />
+
+        <EditText
+            android:id="@+id/passwordField"
+            style="@style/loginTextField"
+            android:layout_width="@dimen/zero_width"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/value_8"
+            android:layout_marginEnd="@dimen/value_24"
+            android:hint="@string/hint_password"
+            android:imeOptions="actionDone"
+            android:importantForAutofill="yes"
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+            android:selectAllOnFocus="true"
+            app:layout_constraintBottom_toTopOf="@id/signInButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/passwordTextView"
+            app:layout_constraintTop_toBottomOf="@+id/passwordTextView"
+             />
+
+        <Button
+            android:id="@+id/signInButton"
+            style="@style/applicationButton"
+            android:layout_width="@dimen/zero_width"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginTop="@dimen/value_16"
+            android:onClick="@{() -> loginViewModel.goToWelcomeStart()}"
+            android:text="@string/action_sign_in"
+            app:layout_constraintBottom_toTopOf="@+id/registerButton"
+            app:layout_constraintEnd_toEndOf="@+id/passwordField"
+            app:layout_constraintStart_toStartOf="@+id/passwordField"
+            app:layout_constraintTop_toBottomOf="@+id/passwordField" />
+
+        <Button
+            android:id="@+id/registerButton"
+            style="@style/applicationButton"
+            android:layout_width="@dimen/zero_width"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginTop="@dimen/value_8"
+            android:onClick="@{() -> loginViewModel.goToWelcomeStart()}"
+            android:text="@string/action_register"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/passwordField"
+            app:layout_constraintStart_toStartOf="@+id/passwordField"
+            app:layout_constraintTop_toBottomOf="@+id/signInButton" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <data>
+
+        <variable
+            name="loginViewModel"
+            type="com.alilbanna.shoestore.AllViewModel" />
+    </data>
+
+</layout>

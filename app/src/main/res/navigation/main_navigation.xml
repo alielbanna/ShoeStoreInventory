@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/loginFragment">
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.alilbanna.shoestore.screens.login.LoginFragment"
+        android:label="login_fragment"
+        tools:layout="@layout/login_fragment" >
+        <action
+            android:id="@+id/action_login_to_onboarding"
+            app:destination="@id/onBoardingFragment"
+            app:popUpTo="@id/onBoardingFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/onBoardingFragment"
+        android:name="com.alilbanna.shoestore.screens.onboarding.OnBoardingFragment"
+        android:label="onboarding_fragment"
+        tools:layout="@layout/onboarding_fragment" >
+        <action
+            android:id="@+id/action_onBoarding_to_instructions1"
+            app:destination="@id/instructionsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.alilbanna.shoestore.screens.home.HomeFragment"
+        android:label="home_fragment"
+        tools:layout="@layout/home_fragment" >
+        <action
+            android:id="@+id/action_home_to_login"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_home_to_shoeDetails"
+            app:destination="@id/shoeDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/instructions2Fragment"
+        android:name="com.alilbanna.shoestore.screens.instructions.Instructions2Fragment"
+        android:label="instructions2_fragment"
+        tools:layout="@layout/instructions2_fragment" >
+        <action
+            android:id="@+id/action_instructions2_to_home"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/instructionsFragment"
+        android:name="com.alilbanna.shoestore.screens.instructions.InstructionsFragment"
+        android:label="instructions_fragment"
+        tools:layout="@layout/instructions_fragment" >
+        <action
+            android:id="@+id/action_instructions1_to_instructions2"
+            app:destination="@id/instructions2Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoeDetailsFragment"
+        android:name="com.alilbanna.shoestore.screens.shoe_details.ShoeDetailsFragment"
+        android:label="shoe_details_fragment"
+        tools:layout="@layout/shoe_details_fragment" />
+</navigation>

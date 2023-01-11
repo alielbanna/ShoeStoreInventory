@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">Shoe Store</string>
+    <!-- Strings related to onboarding -->
+    <string name="onboarding_image">OnBoarding Image</string>
+    <string name="welcome">Welcome</string>
+    <string name="hi_there_welcome_to_our_shoe_store">Hi there! 👋 Welcome to our shoe store.</string>
+    <string name="next">Next</string>
+
+    <!-- Strings related to login -->
+    <string name="hint_email">example@email.com</string>
+    <string name="hint_password">*************</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="action_register">Register</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="user">Username</string>
+    <string name="password">Password</string>
+    <string name="instruction_one_text">
+        "Press the three dots in the\n"
+        "upper right corner to logout.\n\n"
+        "Press the pink button to add \n"
+        "new shoes to the list"
+    </string>
+    <string name="instruction_two_text">
+        "Fill the fields and select\n"
+        "the size of the shoe"
+    </string>
+    <string name="welcome_text">
+        "Capture your items, get info.\n"
+        "and instantly save it"
+    </string>
+    <string name="title_app">ShoesIn</string>
+    <string name="inventory">Inventory</string>
+    <string name="management">Management</string>
+    <string name="header_image_description">Header image</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Instructions">Instructions</string>
+    <string name="company">Company:</string>
+    <string name="name">Name:</string>
+    <string name="company_name">Company name</string>
+    <string name="company_name_Ex">Women Inc.</string>
+    <string name="shoe_name">Shoe name</string>
+    <string name="shoe_name_Ex">Women Shoe</string>
+    <string name="description">Description…</string>
+    <string name="twelve">12</string>
+    <string name="eleven">11</string>
+    <string name="ten">10</string>
+    <string name="nine">9</string>
+    <string name="eight">8</string>
+    <string name="select_available_size">Select available size:</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="title_shoe_detail">Shoe Detail</string>
+    <string name="title_shoes_added">Shoes Added</string>
+    <string name="logout">Logout</string>
+
+</resources>
