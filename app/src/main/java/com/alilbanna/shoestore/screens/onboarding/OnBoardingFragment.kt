@@ -16,6 +16,7 @@ import com.alilbanna.shoestore.R
 import com.alilbanna.shoestore.databinding.OnboardingFragmentBinding
 
 class OnBoardingFragment : Fragment() {
+
     private lateinit var binding: OnboardingFragmentBinding
     private lateinit var viewModel: AllViewModel
 
@@ -37,17 +38,6 @@ class OnBoardingFragment : Fragment() {
         return binding.root
     }
 
-    private fun setBackPressedConfiguration() {
-        activity?.onBackPressedDispatcher?.addCallback(viewLifecycleOwner, object : OnBackPressedCallback(true) {
-            override fun handleOnBackPressed() {
-                val i = Intent()
-                i.action = Intent.ACTION_MAIN
-                i.addCategory(Intent.CATEGORY_HOME)
-                startActivity(i)
-            }
-        })
-    }
-
     private fun initViewModel() {
         viewModel = ViewModelProvider(requireActivity()).get(AllViewModel::class.java)
 
@@ -55,12 +45,25 @@ class OnBoardingFragment : Fragment() {
     }
 
     private fun initObservers() {
-        viewModel.eventNextWelcomePress.observe(viewLifecycleOwner, {
+        viewModel.eventNextWelcomePress.observe(viewLifecycleOwner) {
             if (it) {
                 goToInstruction()
                 viewModel.goToInstructionComplete()
             }
-        })
+        }
+    }
+
+    private fun setBackPressedConfiguration() {
+        activity?.onBackPressedDispatcher?.addCallback(
+            viewLifecycleOwner,
+            object : OnBackPressedCallback(true) {
+                override fun handleOnBackPressed() {
+                    val i = Intent()
+                    i.action = Intent.ACTION_MAIN
+                    i.addCategory(Intent.CATEGORY_HOME)
+                    startActivity(i)
+                }
+            })
     }
 
     private fun goToInstruction() {

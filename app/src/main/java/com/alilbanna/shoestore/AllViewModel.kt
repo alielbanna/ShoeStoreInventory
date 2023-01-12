@@ -39,47 +39,6 @@ class AllViewModel : ViewModel(){
     val eventNextInstructionDetailPress: LiveData<Boolean>
         get() = _eventNextInstructionDetailPress
 
-
-    // Login Functions
-    fun goToWelcomeStart() {
-        _eventLoginMade.value = true
-    }
-
-    fun goToWelcomeComplete() {
-        _eventLoginMade.value = false
-    }
-
-
-    // Instructions Functions
-    fun goToInstructionDetailStart() {
-        _eventNextInstructionPress.value = true
-    }
-
-    fun goToInstructionDetailComplete() {
-        _eventNextInstructionPress.value = false
-    }
-
-
-    // Instructions Details Functions
-    fun goToShoeListStart() {
-        _eventNextInstructionDetailPress.value = true
-    }
-
-    fun goToShoeListComplete() {
-        _eventNextInstructionDetailPress.value = false
-    }
-
-
-    // OnBoarding Functions
-    fun goToInstructionStart() {
-        _eventNextWelcomePress.value = true
-    }
-
-    fun goToInstructionComplete() {
-        _eventNextWelcomePress.value = false
-    }
-
-
     //Shoes List
     private var _shoesList = MutableLiveData<MutableList<ShoeModel>?>(mutableListOf())
     val shoesList: MutableLiveData<MutableList<ShoeModel>?>
@@ -124,6 +83,47 @@ class AllViewModel : ViewModel(){
     private val _eventSaveFailByNameCompanyShoeDetail = MutableLiveData(false)
     val eventSaveFailByNameCompanyShoeDetail: LiveData<Boolean>
         get() = _eventSaveFailByNameCompanyShoeDetail
+
+
+    // Login Functions
+    fun goToWelcomeStart() {
+        _eventLoginMade.value = true
+    }
+
+    fun goToWelcomeComplete() {
+        _eventLoginMade.value = false
+    }
+
+
+    // Instructions Functions
+    fun goToInstructionDetailStart() {
+        _eventNextInstructionPress.value = true
+    }
+
+    fun goToInstructionDetailComplete() {
+        _eventNextInstructionPress.value = false
+    }
+
+
+    // Instructions Details Functions
+    fun goToShoeListStart() {
+        _eventNextInstructionDetailPress.value = true
+    }
+
+    fun goToShoeListComplete() {
+        _eventNextInstructionDetailPress.value = false
+    }
+
+
+    // OnBoarding Functions
+    fun goToInstructionStart() {
+        _eventNextWelcomePress.value = true
+    }
+
+    fun goToInstructionComplete() {
+        _eventNextWelcomePress.value = false
+    }
+
 
     //Shoes List Functions
     fun goToShoeDetailStart() {

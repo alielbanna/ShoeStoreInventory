@@ -20,6 +20,6 @@ data class ShoeModel(
         "model7",
         "model8",
         "model9",
-        "model10",
+        "model10"
     )
 ) : Parcelable

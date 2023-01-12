@@ -23,7 +23,8 @@ class ShoeDetailsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = DataBindingUtil.inflate(inflater, R.layout.shoe_details_fragment, container, false)
+        binding =
+            DataBindingUtil.inflate(inflater, R.layout.shoe_details_fragment, container, false)
 
         initViewModel()
         initObservers()
@@ -97,12 +98,19 @@ class ShoeDetailsFragment : Fragment() {
             }
     }
 
-    private fun saveShoeDetail() {
-        findNavController().popBackStack()
-    }
-
-    private fun cancelShoeDetail() {
-        findNavController().popBackStack()
+    private fun changePictureShoeDetailPress(nameModelShoe: String) {
+        when (nameModelShoe) {
+            "model1" -> binding.imageShoe.setImageResource(R.drawable.model1)
+            "model2" -> binding.imageShoe.setImageResource(R.drawable.model2)
+            "model3" -> binding.imageShoe.setImageResource(R.drawable.model3)
+            "model4" -> binding.imageShoe.setImageResource(R.drawable.model4)
+            "model5" -> binding.imageShoe.setImageResource(R.drawable.model5)
+            "model6" -> binding.imageShoe.setImageResource(R.drawable.model6)
+            "model7" -> binding.imageShoe.setImageResource(R.drawable.model7)
+            "model8" -> binding.imageShoe.setImageResource(R.drawable.model8)
+            "model9" -> binding.imageShoe.setImageResource(R.drawable.model9)
+            "model10" -> binding.imageShoe.setImageResource(R.drawable.model10)
+        }
     }
 
     private fun clearSizeShoeDetail() {
@@ -117,19 +125,13 @@ class ShoeDetailsFragment : Fragment() {
         view.setBackgroundResource(R.drawable.enabled_circle)
     }
 
-    private fun changePictureShoeDetailPress(nameModelShoe: String) {
-        when (nameModelShoe) {
-            "model1" -> binding.imageShoe.setImageResource(R.drawable.model1)
-            "model2" -> binding.imageShoe.setImageResource(R.drawable.model2)
-            "model3" -> binding.imageShoe.setImageResource(R.drawable.model3)
-            "model4" -> binding.imageShoe.setImageResource(R.drawable.model4)
-            "model5" -> binding.imageShoe.setImageResource(R.drawable.model5)
-            "model6" -> binding.imageShoe.setImageResource(R.drawable.model6)
-            "model7" -> binding.imageShoe.setImageResource(R.drawable.model7)
-            "model8" -> binding.imageShoe.setImageResource(R.drawable.model8)
-            "model9" -> binding.imageShoe.setImageResource(R.drawable.model9)
-            "model10" -> binding.imageShoe.setImageResource(R.drawable.model10)
-        }
+
+    private fun saveShoeDetail() {
+        findNavController().popBackStack()
+    }
+
+    private fun cancelShoeDetail() {
+        findNavController().popBackStack()
     }
 
     private fun showAlert(message: String) {

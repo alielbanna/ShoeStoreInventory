@@ -40,15 +40,15 @@ class InstructionsFragment : Fragment() {
     }
 
     private fun initObservers() {
-        instructionsViewModel.eventNextInstructionPress.observe(viewLifecycleOwner, {
+        instructionsViewModel.eventNextInstructionPress.observe(viewLifecycleOwner) {
             if (it) {
-                goToInstructionDetail()
+                goToInstruction2()
                 instructionsViewModel.goToInstructionDetailComplete()
             }
-        })
+        }
     }
 
-    private fun goToInstructionDetail() {
+    private fun goToInstruction2() {
         findNavController().navigate(R.id.action_instructions1_to_instructions2)
     }
 }

@@ -41,12 +41,12 @@ class LoginFragment : Fragment() {
     }
 
     private fun initObservers() {
-        viewModel.eventLoginMade.observe(viewLifecycleOwner, {
+        viewModel.eventLoginMade.observe(viewLifecycleOwner) {
             if (it) {
                 goToOnBoarding()
                 viewModel.goToWelcomeComplete()
             }
-        })
+        }
     }
 
     private fun goToOnBoarding() {

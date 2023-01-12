@@ -39,15 +39,15 @@ class Instructions2Fragment : Fragment() {
     }
 
     private fun initObservers() {
-        viewModel.eventNextInstructionDetailPress.observe(viewLifecycleOwner, {
+        viewModel.eventNextInstructionDetailPress.observe(viewLifecycleOwner) {
             if (it) {
-                goToShoeList()
+                goToHome()
                 viewModel.goToShoeListComplete()
             }
-        })
+        }
     }
 
-    private fun goToShoeList() {
+    private fun goToHome() {
         findNavController().navigate(R.id.action_instructions2_to_home)
     }
 }

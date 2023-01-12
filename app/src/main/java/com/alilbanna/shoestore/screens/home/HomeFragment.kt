@@ -42,26 +42,7 @@ class HomeFragment : Fragment() {
         return binding.root
     }
 
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        super.onCreateOptionsMenu(menu, inflater)
-        inflater.inflate(R.menu.menu, menu)
-    }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        findNavController().navigate(R.id.action_home_to_login)
-        return super.onOptionsItemSelected(item)
-    }
-
-    private fun setBackPressedConfiguration() {
-        activity?.onBackPressedDispatcher?.addCallback(this, object : OnBackPressedCallback(true) {
-            override fun handleOnBackPressed() {
-                val i = Intent()
-                i.action = Intent.ACTION_MAIN
-                i.addCategory(Intent.CATEGORY_HOME)
-                startActivity(i)
-            }
-        })
-    }
 
     private fun initViewModel() {
         viewModel = ViewModelProvider(requireActivity()).get(AllViewModel::class.java)
@@ -82,10 +63,6 @@ class HomeFragment : Fragment() {
                 initShoeList(listShoes)
             }
         }
-    }
-
-    private fun goToShoeList() {
-        findNavController().navigate(R.id.action_home_to_shoeDetails)
     }
 
     private fun initShoeList(listShoes: MutableList<ShoeModel>) {
@@ -121,4 +98,31 @@ class HomeFragment : Fragment() {
             index++
         }
     }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.menu, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        findNavController().navigate(R.id.action_home_to_login)
+        return super.onOptionsItemSelected(item)
+    }
+
+    private fun setBackPressedConfiguration() {
+        activity?.onBackPressedDispatcher?.addCallback(this, object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                val i = Intent()
+                i.action = Intent.ACTION_MAIN
+                i.addCategory(Intent.CATEGORY_HOME)
+                startActivity(i)
+            }
+        })
+    }
+
+    private fun goToShoeList() {
+        findNavController().navigate(R.id.action_home_to_shoeDetails)
+    }
+
+
 }

@@ -12,32 +12,48 @@
         <action
             android:id="@+id/action_login_to_onboarding"
             app:destination="@id/onBoardingFragment"
-            app:popUpTo="@id/onBoardingFragment"
+            app:enterAnim="@anim/slide_in_bottom_to_top"
+            app:exitAnim="@anim/slide_out_to_top"
             app:launchSingleTop="false"
+            app:popEnterAnim="@anim/slide_in_top_to_bottom"
+            app:popExitAnim="@anim/slide_out_top_to_bottom"
+            app:popUpTo="@id/onBoardingFragment"
             app:popUpToInclusive="false" />
     </fragment>
     <fragment
         android:id="@+id/onBoardingFragment"
         android:name="com.alilbanna.shoestore.screens.onboarding.OnBoardingFragment"
-        android:label="onboarding_fragment"
+        android:label=" "
         tools:layout="@layout/onboarding_fragment" >
         <action
             android:id="@+id/action_onBoarding_to_instructions1"
-            app:destination="@id/instructionsFragment" />
+            app:destination="@id/instructionsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.alilbanna.shoestore.screens.home.HomeFragment"
-        android:label="@string/title_shoes_added"
+        android:label="@string/shoes_added_title"
         tools:layout="@layout/home_fragment" >
         <action
             android:id="@+id/action_home_to_login"
             app:destination="@id/loginFragment"
+            app:enterAnim="@anim/slide_in_top_to_bottom"
+            app:exitAnim="@anim/slide_out_to_bottom"
+            app:popEnterAnim="@anim/slide_in_top_to_bottom"
+            app:popExitAnim="@anim/slide_out_to_bottom"
             app:popUpTo="@id/loginFragment"
             app:popUpToInclusive="true" />
         <action
             android:id="@+id/action_home_to_shoeDetails"
-            app:destination="@id/shoeDetailsFragment" />
+            app:destination="@id/shoeDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/instructions2Fragment"
@@ -47,6 +63,10 @@
         <action
             android:id="@+id/action_instructions2_to_home"
             app:destination="@id/homeFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_top_to_bottom"
+            app:popExitAnim="@anim/slide_out_to_bottom"
             app:popUpTo="@id/homeFragment"
             app:popUpToInclusive="true" />
     </fragment>
@@ -57,11 +77,15 @@
         tools:layout="@layout/instructions_fragment" >
         <action
             android:id="@+id/action_instructions1_to_instructions2"
-            app:destination="@id/instructions2Fragment" />
+            app:destination="@id/instructions2Fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/shoeDetailsFragment"
         android:name="com.alilbanna.shoestore.screens.shoe_details.ShoeDetailsFragment"
-        android:label="@string/title_shoe_detail"
+        android:label="@string/shoe_details_title"
         tools:layout="@layout/shoe_details_fragment" />
 </navigation>
