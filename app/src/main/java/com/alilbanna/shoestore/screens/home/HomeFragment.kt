@@ -4,9 +4,9 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.*
 import androidx.activity.OnBackPressedCallback
-import androidx.fragment.app.Fragment
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.alilbanna.shoestore.AllViewModel
@@ -70,18 +70,18 @@ class HomeFragment : Fragment() {
     }
 
     private fun initObservers() {
-        viewModel.eventAddShoeListPress.observe(viewLifecycleOwner, {
+        viewModel.eventAddShoeListPress.observe(viewLifecycleOwner) {
             if (it) {
                 goToShoeList()
                 viewModel.goToShoeDetailStartComplete()
             }
-        })
+        }
 
-        viewModel.shoesList.observe(viewLifecycleOwner, { listShoes ->
+        viewModel.shoesList.observe(viewLifecycleOwner) { listShoes ->
             if (listShoes != null) {
                 initShoeList(listShoes)
             }
-        })
+        }
     }
 
     private fun goToShoeList() {
@@ -116,6 +116,7 @@ class HomeFragment : Fragment() {
                 "model9" -> shoeBinding.imageShoe.setImageResource(R.drawable.model9)
                 "model10" -> shoeBinding.imageShoe.setImageResource(R.drawable.model10)
             }
+
             parentLayout.addView(binding.root)
 
             index++

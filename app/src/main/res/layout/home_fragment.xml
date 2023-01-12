@@ -25,7 +25,8 @@
             android:onClick="@{()-> homeViewModel.goToShoeDetailStart()}"
             android:src="@drawable/add_icon"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            android:contentDescription="@string/add_shoe" />
 
         <androidx.core.widget.NestedScrollView
             android:id="@+id/textScrollView"

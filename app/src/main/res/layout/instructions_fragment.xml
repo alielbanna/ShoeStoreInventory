@@ -16,6 +16,84 @@
         android:layout_height="match_parent"
         android:background="@color/white">
 
+        <TextView
+            android:id="@+id/titleInstruction"
+            style="@style/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/value_8"
+            android:layout_marginTop="44dp"
+            android:layout_marginEnd="@dimen/value_8"
+            android:gravity="center"
+            android:text="@string/Instructions"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/instructions_text1"
+            style="@style/applicationText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/value_16"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:text="@string/instruction_text1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleInstruction" />
+
+        <ImageView
+            android:id="@+id/instructions_image1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:src="@drawable/ins1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/instructions_text1"
+            android:contentDescription="@string/instructions_image_1" />
+
+        <TextView
+            android:id="@+id/instructions_text2"
+            style="@style/applicationText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/value_16"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="@string/instruction_text1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.75"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/instructions_image1" />
+
+        <ImageView
+            android:id="@+id/instructions_image2"
+            android:layout_width="345dp"
+            android:layout_height="290dp"
+            android:src="@drawable/ins2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/instructions_text2"
+            android:contentDescription="@string/instructions_image_2" />
+
+        <Button
+            android:id="@+id/nextButtonInstruction"
+            style="@style/applicationButton"
+            android:layout_width="@dimen/zero_width"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:onClick="@{() -> instructionViewModel.goToInstructionDetailStart()}"
+            android:text="@string/next"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
 

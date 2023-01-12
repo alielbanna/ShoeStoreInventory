@@ -16,31 +16,31 @@ class AllViewModel : ViewModel(){
         0
     )
 
-    // Login ----------
+    // Login
     private val _eventLoginMade = MutableLiveData(false)
     val eventLoginMade: LiveData<Boolean>
         get() = _eventLoginMade
-    // ----------------
 
-    // Welcome --------
+
+    // OnBoarding
     private val _eventNextWelcomePress = MutableLiveData(false)
     val eventNextWelcomePress: LiveData<Boolean>
         get() = _eventNextWelcomePress
-    // ---------------
 
-    // Instruction -------------
+
+    // Instruction
     private val _eventNextInstructionPress = MutableLiveData(false)
     val eventNextInstructionPress: LiveData<Boolean>
         get() = _eventNextInstructionPress
-    // -------------------------
 
-    // Instructions Detail ------
+
+    // Instructions Detail
     private val _eventNextInstructionDetailPress = MutableLiveData(false)
     val eventNextInstructionDetailPress: LiveData<Boolean>
         get() = _eventNextInstructionDetailPress
-    // --------------------------
 
-    // Login ------------
+
+    // Login Functions
     fun goToWelcomeStart() {
         _eventLoginMade.value = true
     }
@@ -48,9 +48,9 @@ class AllViewModel : ViewModel(){
     fun goToWelcomeComplete() {
         _eventLoginMade.value = false
     }
-    // ------------------
 
-    // Instructions ----
+
+    // Instructions Functions
     fun goToInstructionDetailStart() {
         _eventNextInstructionPress.value = true
     }
@@ -58,9 +58,9 @@ class AllViewModel : ViewModel(){
     fun goToInstructionDetailComplete() {
         _eventNextInstructionPress.value = false
     }
-    // -----------------
 
-    // Instructions Details --------
+
+    // Instructions Details Functions
     fun goToShoeListStart() {
         _eventNextInstructionDetailPress.value = true
     }
@@ -68,9 +68,9 @@ class AllViewModel : ViewModel(){
     fun goToShoeListComplete() {
         _eventNextInstructionDetailPress.value = false
     }
-    // -----------------------------
 
-    // Welcome ----------
+
+    // OnBoarding Functions
     fun goToInstructionStart() {
         _eventNextWelcomePress.value = true
     }
@@ -78,9 +78,9 @@ class AllViewModel : ViewModel(){
     fun goToInstructionComplete() {
         _eventNextWelcomePress.value = false
     }
-    // ------------------
 
-    //Shoes List -----------
+
+    //Shoes List
     private var _shoesList = MutableLiveData<MutableList<ShoeModel>?>(mutableListOf())
     val shoesList: MutableLiveData<MutableList<ShoeModel>?>
         get() = _shoesList
@@ -88,9 +88,8 @@ class AllViewModel : ViewModel(){
     private val _eventAddShoeListPress = MutableLiveData(false)
     val eventAddShoeListPress: LiveData<Boolean>
         get() = _eventAddShoeListPress
-    // ---------
 
-    //Shoe detail ----------
+
     //save
     private val _eventSaveShoeDetailPress = MutableLiveData(false)
     val eventSaveShoeDetailPress: LiveData<Boolean>
@@ -126,7 +125,7 @@ class AllViewModel : ViewModel(){
     val eventSaveFailByNameCompanyShoeDetail: LiveData<Boolean>
         get() = _eventSaveFailByNameCompanyShoeDetail
 
-    //Shoes List -------
+    //Shoes List Functions
     fun goToShoeDetailStart() {
         _eventAddShoeListPress.value = true
     }
@@ -134,10 +133,9 @@ class AllViewModel : ViewModel(){
     fun goToShoeDetailStartComplete() {
         _eventAddShoeListPress.value = false
     }
-    // ---------
 
-    //Shoe detail
-    //Save
+
+    // Save Functions
     fun saveShoeDetailStart() {
         when {
             shoe.company.trim().isEmpty() -> {
@@ -172,7 +170,7 @@ class AllViewModel : ViewModel(){
         _eventSaveFailBySizeShoeDetail.value = false
     }
 
-    //Cancel
+    //Cancel Functions
     fun cancelShoeDetailStart() {
         _eventCancelShoeDetailPress.value = true
     }

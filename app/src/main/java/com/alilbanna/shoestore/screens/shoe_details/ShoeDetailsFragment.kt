@@ -42,59 +42,59 @@ class ShoeDetailsFragment : Fragment() {
     }
 
     private fun initObservers() {
-        viewModel.eventSaveShoeDetailPress.observe(viewLifecycleOwner, {
+        viewModel.eventSaveShoeDetailPress.observe(viewLifecycleOwner) {
             if (it) {
                 saveShoeDetail()
                 viewModel.saveShoeDetailComplete()
             }
-        })
+        }
 
-        viewModel.eventCancelShoeDetailPress.observe(viewLifecycleOwner, {
+        viewModel.eventCancelShoeDetailPress.observe(viewLifecycleOwner) {
             if (it) {
                 cancelShoeDetail()
                 viewModel.cancelShoeDetailComplete()
             }
-        })
+        }
 
-        viewModel.eventSizeViewShoeDetailPress.observe(viewLifecycleOwner, { view ->
+        viewModel.eventSizeViewShoeDetailPress.observe(viewLifecycleOwner) { view ->
             view?.let {
                 clearSizeShoeDetail()
                 changeBackgroundSizeSelectedShoeDetail(view)
             }
-        })
+        }
 
         viewModel.eventPictureShoeDetailPress.observe(
-            viewLifecycleOwner,
-            { nameModelShoe ->
-                nameModelShoe?.let {
-                    changePictureShoeDetailPress(nameModelShoe)
-                }
-            })
+            viewLifecycleOwner
+        ) { nameModelShoe ->
+            nameModelShoe?.let {
+                changePictureShoeDetailPress(nameModelShoe)
+            }
+        }
 
-        viewModel.eventSaveFailByNameShoeDetail.observe(viewLifecycleOwner, {
+        viewModel.eventSaveFailByNameShoeDetail.observe(viewLifecycleOwner) {
             if (it) {
                 val message = "The name of the shoe is required"
                 showAlert(message)
                 viewModel.saveFailByNameShoeDetailComplete()
             }
-        })
+        }
 
-        viewModel.eventSaveFailBySizeShoeDetail.observe(viewLifecycleOwner, {
+        viewModel.eventSaveFailBySizeShoeDetail.observe(viewLifecycleOwner) {
             if (it) {
                 val message = "The shoe's size is required"
                 showAlert(message)
                 viewModel.saveFailBySizeShoeDetailComplete()
             }
-        })
+        }
 
         viewModel.eventSaveFailByNameCompanyShoeDetail
-            .observe(viewLifecycleOwner, {
+            .observe(viewLifecycleOwner) {
                 if (it) {
                     val message = "The name of the company is required"
                     showAlert(message)
                     viewModel.saveFailByNameCompanyShoeDetailComplete()
                 }
-            })
+            }
     }
 
     private fun saveShoeDetail() {
