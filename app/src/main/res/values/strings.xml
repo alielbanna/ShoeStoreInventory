@@ -17,6 +17,7 @@
     <string name="instruction_text2">Press the three dots in the\n upper right corner to logout.</string>
     <string name="instruction_text3">Fill the fields and select\n the size of the shoe</string>
     <string name="inventory">Inventory</string>
+    <string name="header_image_description">Header image</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="Instructions">Instructions</string>
     <string name="company">Company:</string>
