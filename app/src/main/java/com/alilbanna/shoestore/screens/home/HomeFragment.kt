@@ -117,8 +117,7 @@ class HomeFragment : Fragment() {
                 "model10" -> shoeBinding.imageShoe.setImageResource(R.drawable.model10)
             }
 
-            parentLayout.addView(binding.root)
-
+            parentLayout.addView(shoeBinding.root)
             index++
         }
     }

@@ -52,5 +52,6 @@
     <string name="instructions_image_1">instructions image 1</string>
     <string name="instructions_image_2">instructions image 2</string>
     <string name="instructions_image_3">instructions image 3</string>
+    <string name="shoe_list_scroll">shoe list scroll</string>
 
 </resources>

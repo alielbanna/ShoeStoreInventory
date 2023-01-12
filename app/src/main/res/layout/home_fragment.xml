@@ -29,6 +29,7 @@
             android:contentDescription="@string/add_shoe" />
 
         <androidx.core.widget.NestedScrollView
+            android:contentDescription="@string/shoe_list_scroll"
             android:id="@+id/textScrollView"
             android:layout_width="match_parent"
             android:layout_height="@dimen/zero_height"
@@ -44,6 +45,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/value_100"
                 android:orientation="vertical" />
+
+
 
         </androidx.core.widget.NestedScrollView>
 
