@@ -4,6 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".screens.shoe_details.ShoeDetailsFragment">
 
+    <data>
+
+        <variable
+            name="shoeDetailViewModel"
+            type="com.alilbanna.shoestore.AllViewModel" />
+
+        <variable
+            name="shoeModel"
+            type="com.alilbanna.shoestore.models.ShoeModel" />
+    </data>
+
+    <!--
+   I have chosen a Constraint-layout because is more easy to build the screen
+   and I have add a NestedScrollView because it can be work better to show
+   the instructions text with small smart phones.
+   -->
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -221,17 +238,6 @@
             app:layout_constraintStart_toEndOf="@+id/cancelButton" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <data>
-
-        <variable
-            name="shoeDetailViewModel"
-            type="com.alilbanna.shoestore.AllViewModel" />
-
-        <variable
-            name="shoeModel"
-            type="com.alilbanna.shoestore.models.ShoeModel" />
-    </data>
 </layout>
 
 

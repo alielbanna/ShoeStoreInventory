@@ -2,6 +2,20 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="loginViewModel"
+            type="com.alilbanna.shoestore.AllViewModel" />
+    </data>
+
+    <!--
+   I have chosen a Constraint-layout because is more easy to build the screen
+   and I have add a NestedScrollView because it can be work better to show
+   the instructions text with small smart phones.
+   -->
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/container"
         android:layout_width="match_parent"
@@ -136,12 +150,4 @@
             app:layout_constraintTop_toBottomOf="@+id/signInButton" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <data>
-
-        <variable
-            name="loginViewModel"
-            type="com.alilbanna.shoestore.AllViewModel" />
-    </data>
-
 </layout>

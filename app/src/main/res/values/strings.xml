@@ -4,6 +4,7 @@
     <string name="welcome">Welcome</string>
     <string name="hi_there_welcome_to_our_shoe_store">Hi there! 👋 Welcome to our shoe store.</string>
     <string name="next">Next</string>
+    <!-- Strings related to login -->
     <string name="hint_email">example@email.com</string>
     <string name="hint_password">*************</string>
     <string name="action_sign_in">Sign in</string>

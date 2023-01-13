@@ -11,6 +11,13 @@
             type="com.alilbanna.shoestore.AllViewModel" />
     </data>
 
+
+    <!--
+   I have chosen a Constraint-layout because is more easy to build the screen
+   and I have add a NestedScrollView because it can be work better to show
+   the instructions text with small smart phones.
+   -->
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -22,7 +29,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/value_8"
-            android:layout_marginTop="44dp"
+            android:layout_marginTop="@dimen/value_50"
             android:layout_marginEnd="@dimen/value_8"
             android:gravity="center"
             android:text="@string/Instructions"
@@ -38,7 +45,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="@dimen/value_16"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="@dimen/value_10"
             android:gravity="center"
             android:text="@string/instruction_text1"
             app:layout_constraintEnd_toEndOf="parent"
@@ -49,7 +56,7 @@
             android:id="@+id/instructions_image1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="28dp"
+            android:layout_marginTop="@dimen/value_24"
             android:src="@drawable/ins1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.491"
@@ -64,7 +71,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="@dimen/value_16"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="@dimen/value_16"
             android:gravity="center"
             android:text="@string/instruction_text1"
             app:layout_constraintEnd_toEndOf="parent"

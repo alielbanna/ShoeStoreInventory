@@ -11,6 +11,12 @@ tools:context=".screens.instructions.Instructions2Fragment">
             type="com.alilbanna.shoestore.AllViewModel" />
     </data>
 
+    <!--
+   I have chosen a Constraint-layout because is more easy to build the screen
+   and I have add a NestedScrollView because it can be work better to show
+   the instructions text with small smart phones.
+   -->
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
